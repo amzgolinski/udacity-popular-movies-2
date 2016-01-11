@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <TextView
+      android:id="@+id/movie_detail_title"
+      style="@style/MovieTitle"/>
+
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/movie_detail_poster"
+        style="@style/MoviePoster"
+        android:src="@drawable/the_force_awakens"
+        android:layout_width="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+          android:orientation="vertical"
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:layout_height="match_parent">
+
+        <TextView
+            style="@style/MovieReleaseDate"
+            android:id="@+id/movie_detail_release_date"/>
+
+        <LinearLayout
+            android:id="@+id/movie_user_rating"
+            style="@style/MovieUserRatingLayout">
+
+          <TextView
+              style="@style/MovieUserRating"
+              android:id="@+id/movie_detail_rating"/>
+
+          <TextView
+              style="@style/MovieUserRating"
+              android:text="@string/label_user_rating"/>
+
+        </LinearLayout>
+
+      <CheckBox
+          android:id="@+id/favorite"
+          android:onClick="saveFavorite"
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content"
+          android:text="@string/favorite_text"
+          android:textStyle="italic"
+          android:textSize="20sp"
+          android:textColor="@color/light_gray"
+          style="?android:attr/starStyle"/>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <TextView
+      android:id="@+id/movie_detail_overview"
+      style="@style/MovieOverview"
+      android:layout_marginTop="10dp"/>
+
+</LinearLayout>
