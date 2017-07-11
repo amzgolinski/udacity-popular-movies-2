@@ -21,7 +21,7 @@
   <string name="movie_poster_size">w185</string>
 
   <!-- themoviedb API key -->
-  <string name="api_key">YOUR API KEY</string>
+  <string name="api_key">b2f31560b414c6b99b032f2cef82a581</string>
   <string name="reviews">reviews</string>
   <string name="videos">videos</string>
 
