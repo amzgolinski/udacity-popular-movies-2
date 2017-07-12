@@ -11,14 +11,13 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:text="John Doe"
-      android:textColor="@color/black"
-      android:textStyle="bold"/>
+      style="@style/UserName"/>
 
   <TextView
       android:id="@+id/review_content"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="This is my movie review.  It stunk."
-      android:textColor="@color/dark_gray"/>
+      style="@style/UserReview"
+      android:text="This is my movie review.  It stunk."/>
 
 </LinearLayout>

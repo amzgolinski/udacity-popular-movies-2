@@ -4,11 +4,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
+import android.support.design.widget.BaseTransientBottomBar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CursorAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.android.popularmovies.MovieDetailFragment;
 import com.example.android.popularmovies.R;
@@ -40,7 +42,7 @@ public class TrailersAdapter extends CursorAdapter {
     view.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-
+        Toast.makeText(context, "Hello", Toast.LENGTH_SHORT).show();
         String youtubeKey = cursor.getString(MovieDetailFragment.COL_TRAILER_KEY);
         Intent intent = new Intent(
             Intent.ACTION_VIEW,
@@ -49,8 +51,12 @@ public class TrailersAdapter extends CursorAdapter {
 
         if (intent.resolveActivity(context.getPackageManager()) != null) {
           context.startActivity(intent);
+        } else {
+          Toast.makeText(
+            context,
+            "No application configured to handle video.",
+            Toast.LENGTH_SHORT).show();
         }
-
       }
     });
   }
