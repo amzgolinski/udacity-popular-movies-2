@@ -68,7 +68,7 @@ public class MovieDetailAdapter extends CursorAdapter {
     mMovieOverview.setText(data.getString(MovieDetailFragment.COL_MOVIE_OVERVIEW));
 
     float movieRating = data.getFloat(MovieDetailFragment.COL_MOVIE_RATING);
-    mMovieRating.setText(Utils.getRatingAsString(movieRating));
+    mMovieRating.setText(context.getString(R.string.user_rating, movieRating));
 
     String releaseDate = data.getString(MovieDetailFragment.COL_MOVIE_RELEASE_DATE);
     mMovieReleaseDate.setText(

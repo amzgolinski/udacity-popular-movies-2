@@ -55,9 +55,9 @@ public class Utils {
   }
 
   public static String getFormattedReleaseDate (Context context,
-                                                String release_date) {
+                                                String releaseDate) {
     String toReturn = "N/A";
-    if (!Utils.isStringEmpty(release_date)) {
+    if (!Utils.isStringEmpty(releaseDate)) {
 
       SimpleDateFormat dateFormat = new SimpleDateFormat(
           context.getString(R.string.movie_date_db_format),
@@ -65,7 +65,7 @@ public class Utils {
       );
 
       try {
-        Date parsed = dateFormat.parse(release_date);
+        Date parsed = dateFormat.parse(releaseDate);
         System.out.println(parsed);
         dateFormat = new SimpleDateFormat(
             context.getString(R.string.movie_date_display_format),
@@ -77,18 +77,6 @@ public class Utils {
       }
     }
     return toReturn;
-  }
-
-  public static String getRatingAsString (float vote_average) {
-
-    StringBuilder toReturn = new StringBuilder();
-    if (vote_average == 10.0 || vote_average == 0.0) {
-      toReturn.append(Math.round(vote_average));
-    } else {
-      toReturn.append(vote_average);
-    }
-    toReturn.append(" / 10");
-    return toReturn.toString();
   }
 
 }

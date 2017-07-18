@@ -6,7 +6,7 @@
 
   <string name="activity_movie_detail">Movie Detail</string>
   <string name="label_movie_release_date">Release:</string>
-  <string name="label_user_rating">(TMDb)</string>
+  <string name="user_rating">%.1f / 10 (TMDb)</string>
 
   <string name="movie_sort_title">Movie Sort</string>
   <string name="movie_sort_key">movie_sort</string>

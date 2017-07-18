@@ -55,10 +55,6 @@
                       style="@style/MovieUserRating"
                       android:id="@+id/movie_detail_rating"/>
 
-                  <TextView
-                      style="@style/MovieUserRating"
-                      android:text="@string/label_user_rating"/>
-
                   <CheckBox
                       android:id="@+id/favorite"
                       android:layout_height="wrap_content"

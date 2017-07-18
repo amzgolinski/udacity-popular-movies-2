@@ -4,10 +4,6 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-  <TextView
-    android:id="@+id/movie_detail_title"
-    style="@style/MovieTitle"/>
-
   <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -24,11 +20,18 @@
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:layout_weight="1"
+      android:paddingTop="10dp"
       android:orientation="vertical">
 
       <TextView
+        android:id="@+id/movie_detail_title"
+        style="@style/MovieTitle"
+        android:text="Star Wars Episode VII: The Force Awakens"/>
+
+      <TextView
         android:id="@+id/movie_detail_release_date"
-        style="@style/MovieReleaseDate"/>
+        style="@style/MovieReleaseDate"
+        android:text="December 2015"/>
 
       <LinearLayout
         android:id="@+id/movie_user_rating"
@@ -36,26 +39,24 @@
 
         <TextView
           android:id="@+id/movie_detail_rating"
-          style="@style/MovieUserRating"/>
-
-        <TextView
           style="@style/MovieUserRating"
-          android:text="@string/label_user_rating"/>
+          android:text="7.5 / 10 (TMDb)"/>
+
+        <CheckBox
+          android:id="@+id/favorite"
+          style="?android:attr/starStyle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:onClick="saveFavorite"
+          android:textColor="@color/light_gray"
+          android:textSize="20sp"
+          android:textStyle="italic"/>
 
       </LinearLayout>
 
-      <CheckBox
-        android:id="@+id/favorite"
-        style="?android:attr/starStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="saveFavorite"
-        android:text="@string/favorite_text"
-        android:textColor="@color/light_gray"
-        android:textSize="20sp"
-        android:textStyle="italic"/>
+      </LinearLayout>
 
-    </LinearLayout>
+
 
   </LinearLayout>
 
