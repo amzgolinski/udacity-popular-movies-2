@@ -21,7 +21,7 @@
   <style name="MovieTitle" parent="MovieDetail">
     <item name="android:gravity">left</item>
     <item name="android:textSize">24sp</item>
-    <item name="android:textColor">@color/black</item>
+    <item name="android:textColor">@android:color/black</item>
     <item name="android:textStyle">italic|bold</item>
     <item name="android:capitalize">characters</item>
     <item name="android:layout_height">wrap_content</item>
@@ -33,14 +33,14 @@
     <item name="android:layout_marginBottom">10dp</item>
     <item name="android:layout_marginTop">10dp</item>
     <item name="android:gravity">left</item>
-    <item name="android:textColor">@color/black</item>
+    <item name="android:textColor">@android:color/black</item>
   </style>
 
   <style name="MovieUserRating" parent="MovieDetail">
     <item name="android:layout_marginRight">2dp</item>
     <item name="android:layout_width">wrap_content</item>
     <item name="android:textSize">18sp</item>
-    <item name="android:textColor">@color/black</item>
+    <item name="android:textColor">@android:color/black</item>
   </style>
 
   <style name="MoviePoster">
@@ -81,7 +81,7 @@
   </style>
 
   <style name="UserName">
-    <item name="android:textColor">@color/black</item>
+    <item name="android:textColor">@android:color/black</item>
     <item name="android:paddingStart">20dp</item>
     <item name="android:paddingEnd">20dp</item>
     <item name="android:textSize">18sp</item>

@@ -42,7 +42,6 @@ public class TrailersAdapter extends CursorAdapter {
     view.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-        Toast.makeText(context, "Hello", Toast.LENGTH_SHORT).show();
         String youtubeKey = cursor.getString(MovieDetailFragment.COL_TRAILER_KEY);
         Intent intent = new Intent(
             Intent.ACTION_VIEW,

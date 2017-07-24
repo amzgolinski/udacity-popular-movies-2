@@ -78,8 +78,8 @@ public class MovieDetailAdapter extends CursorAdapter {
     int isFavorite = data.getInt(MovieDetailFragment.COL_MOVIE_IS_FAVORITE);
     if (isFavorite == 1) {
       mFavorite.setChecked(true);
-      int color = ContextCompat.getColor(context, R.color.black);
-      mFavorite.setTextColor(color);
+      //int color = ContextCompat.getColor(context, R.color.black);
+      //mFavorite.setTextColor(color);
     }
 
     String posterPath = data.getString(MovieDetailFragment.COL_MOVIE_POSTER_PATH);
@@ -123,16 +123,15 @@ public class MovieDetailAdapter extends CursorAdapter {
         null
     );
 
+    /*
     int color = 0;
-
     if (checkBox.isChecked()) {
       color = ContextCompat.getColor(context, R.color.black);
     } else {
       color = ContextCompat.getColor(context, R.color.light_gray);
     }
-
     ((CheckBox) view).setTextColor(color);
-
+    */
     Toast toast = Toast.makeText(
         context,
         context.getString(R.string.updating_favorites),

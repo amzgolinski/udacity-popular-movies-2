@@ -5,8 +5,7 @@
               android:layout_height="match_parent"
               android:baselineAligned="false"
               android:divider="?android:attr/dividerHorizontal"
-              android:orientation="horizontal"
-              tools:context="com.example.android.sunshine.app.MainActivity">
+              android:orientation="horizontal">
 
   <fragment android:id="@+id/list_fragment"
             android:name="com.example.android.popularmovies.MovieListActivityFragment"
